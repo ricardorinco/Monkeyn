@@ -2,9 +2,6 @@
 
 # Monkey'n Apps
 
-Endpoints: 
-Endpoints Tests:
-
 ### Endpoints
  - [POST] Queue/{numberDiscs}: http://localhost:57725/api/hanoi/queue/3
  - [GET] GetById/{Id}: http://localhost:57725/api/hanoi/c569bf6c-66d3-406d-b0b4-41dde92a3b5c
