@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0341F243-0C7E-4DBA-98E1-FBC6F07B5112}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monkeyn.Domain</RootNamespace>
+    <AssemblyName>Monkeyn.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DomainValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DomainValidation.1.0.0\lib\net451\DomainValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\ErrorMessages.cs" />
+    <Compile Include="Interfaces\Repositories\IHanoiRepository.cs" />
+    <Compile Include="Interfaces\Services\IHanoiService.cs" />
+    <Compile Include="Interfaces\Services\IStepHanoiService.cs" />
+    <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\Hanoi.cs" />
+    <Compile Include="Models\Move.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\HanoiService.cs" />
+    <Compile Include="Services\StepHanoiService.cs" />
+    <Compile Include="Specifications\Datas\FinalDateTime\FinalDateTimeMustHaveDateEqualOrGreaterThanCurrentDateSpecification.cs" />
+    <Compile Include="Specifications\Datas\InitialDateTime\InitialDateTimeMustHaveDateSpecification.cs" />
+    <Compile Include="Specifications\Datas\InitialDateTime\InitialDateTimeMustHaveDateEqualOrGreaterThanCurrentDateSpecification.cs" />
+    <Compile Include="Specifications\Datas\NumberDisc\NumberDiscMustHaveNumberGreaterThanZeroSpecification.cs" />
+    <Compile Include="Specifications\Hanois\Id\HanoiMustHaveIdSpecification.cs" />
+    <Compile Include="Specifications\Hanois\Status\HanoiMustHaveStatusSpecification.cs" />
+    <Compile Include="Specifications\Moves\FromPin\FromPinMustHavePinLetterValidSpecification.cs" />
+    <Compile Include="Specifications\Moves\FromPin\FromPinMustHavePinLetterSpecification.cs" />
+    <Compile Include="Specifications\Moves\ToPin\ToPinMustHavePinLetterValidSpecification.cs" />
+    <Compile Include="Specifications\Moves\ToPin\ToPinMustHavePinLetterSpecification.cs" />
+    <Compile Include="Validations\Datas\DataIsConsistentValidation.cs" />
+    <Compile Include="Validations\Hanois\HanoiIsConsistentValidation.cs" />
+    <Compile Include="Validations\Moves\MoveIsConsistentValidation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

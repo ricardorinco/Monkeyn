@@ -1,0 +1,80 @@
+{
+	"info": {
+		"name": "Monkeyn",
+		"_postman_id": "7d0d0025-f623-1871-e9ef-bd1e08ba0f5e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Queue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:57725/api/hanoi/queue/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57725",
+					"path": [
+						"api",
+						"hanoi",
+						"queue",
+						"3"
+					]
+				},
+				"description": "Endpoint para enfileirar um futura execução da Torre de Hanói."
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:57725/api/hanoi/c569bf6c-66d3-406d-b0b4-41dde92a3b5c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57725",
+					"path": [
+						"api",
+						"hanoi",
+						"c569bf6c-66d3-406d-b0b4-41dde92a3b5c"
+					]
+				},
+				"description": "Endpoint para recuperar uma execuções específica da Torre de Hanói."
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:57725/api/hanoi/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "57725",
+					"path": [
+						"api",
+						"hanoi",
+						""
+					]
+				},
+				"description": "Endpoint para recuperar todas as execuções da Torre de Hanói."
+			},
+			"response": []
+		}
+	]
+}
